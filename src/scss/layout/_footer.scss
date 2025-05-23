@@ -1,0 +1,41 @@
+/* Estilos para el footer */
+.footer {
+    background-color: #000;  // Fondo negro
+    padding: 2rem 0;
+    margin-top: 3rem;       // Espacio superior
+    color: #fff;           // Texto blanco
+    text-align: center;    // Centrado general
+
+    .contenedor-footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;  // Centra todo verticalmente
+    }
+
+    /* Estilos para la navegación */
+    .navegacion {
+        display: flex;
+        gap: 2rem;           // Espacio entre enlaces
+        justify-content: center; // Centra los enlaces horizontalmente
+        margin-bottom: 1rem;
+
+        a {
+            color: #fff;    // Texto blanco
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+
+            &:hover {
+                color: #FFC107;  // Amarillo al hover (para coincidir con los botones)
+                text-decoration: underline; // Opcional: subrayado al hover
+            }
+        }
+    }
+
+    /* Texto adicional (opcional) */
+    .copyright {
+        font-size: 0.9rem;
+        opacity: 0.8;
+        color: #fff;
+    }
+}

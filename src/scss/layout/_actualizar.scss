@@ -1,0 +1,48 @@
+/* Estilos para el formulario */
+.formulario {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.formulario fieldset {
+    border: 1px solid #e1e1e1;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.formulario legend {
+    font-weight: bold;
+    padding: 0 1rem;
+}
+
+.formulario label {
+    display: block;
+    margin: 1rem 0;
+}
+
+.formulario input {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.boton {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+.boton-verde {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.alerta.error {
+    background-color: #ff4d4d;
+    color: white;
+    padding: 1rem;
+    margin: 1rem 0;
+}

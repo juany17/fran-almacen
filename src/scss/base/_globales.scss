@@ -1,0 +1,120 @@
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    font-family: $fuente_principal;
+    font-size: 1.6rem;
+    line-height: 1.8;
+}
+p {
+    color: $negro;
+    font-size: 2rem;
+}
+.contenedor {
+    width: 95%;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+img,
+picture {
+    width: 100%;
+    display: block;
+}
+
+h1, h2, h3 {
+    font-family: $fuente_principal;
+    margin: calc($separacion / 2) 0;
+    font-weight: 300;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3.8rem;
+}
+h2 {
+    font-size: 3.4rem;
+}
+h3 {
+    font-size: 3rem;
+}
+h4 {
+    font-size: 2.6rem;
+}
+
+fieldset {
+    border: 2px solid #007bff;
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+main {
+    max-width: 600px;
+    margin: 4rem auto;
+    background-color: #ffffff;
+    padding: 2rem 3rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.campo input[type="text"] {
+    width: 300px;
+    height: 40px;
+    font-size: 16px;
+    padding: 8px;
+    flex: 1;
+    padding: 8px;
+    font-size: 14px;
+     }
+
+ .campo {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+    
+ .campo label {
+        width: 100px;
+        font-weight: bold;
+    }
+        
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    thead {
+        background-color: #007bff;
+        color: white;
+    }
+
+    th, td {
+        padding: 1rem;
+        text-align: left;
+        border-bottom: 1px solid #ccc;
+    }
+
+    tbody tr:hover {
+        background-color: #f1f1f1;
+    }
+
+    .ingreso {
+        color: green;
+        font-weight: bold;
+    }
+
+    .egreso {
+        color: red;
+        font-weight: bold;
+    }

@@ -1,0 +1,25 @@
+.header {
+    background-color: white;
+    border-radius: 0 0 15px 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 1rem 0;
+    position: relative;
+    z-index: 1000;
+}
+
+
+.login-link a {
+    text-decoration: none;
+
+    h3 {
+        margin: 0;
+        font-weight: 700;
+        font-size: 1.2rem;
+        color: #007bff;
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: #0056b3;
+        }
+    }
+}

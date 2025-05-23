@@ -1,0 +1,88 @@
+/* Estilos base para todos los botones */
+.boton {
+    background-color: #FFC107;  // Amarillo vibrante
+    color: #333;               // Texto oscuro para contraste
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;         // Bordes redondeados
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;  // Transición suave para animaciones
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); // Sombra sutil
+    margin-top: 4rem;
+
+    /* Efecto hover (animación) */
+    &:hover {
+        background-color: #FFD54F;  // Amarillo más claro
+        transform: translateY(-2px); // Levanta el botón ligeramente
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); // Sombra más pronunciada
+    }
+
+    /* Efecto al hacer clic */
+    &:active {
+        transform: translateY(0); // Vuelve a su posición original
+    }
+}
+
+.volver {
+    display: inline-block;
+    margin-top: 2rem;
+    background-color: #007bff;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.boton-rojo-block {
+    @include boton($rojo, black);
+    width: 100%;
+}
+
+/* Estilos para los botones de acciones */
+.acciones {
+    display: flex;
+    gap: 10px; /* Espacio entre botones */
+    margin-top: 15px;
+}
+
+.boton-eliminar {
+    background-color: #ff4d4d;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+.boton-eliminar:hover {
+    background-color: #ff1a1a;
+}
+
+.boton-actualizar {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+.boton-actualizar:hover {
+    background-color: #3e8e41;
+}
+
+/* Para el formulario inline del botón eliminar */
+.acciones form {
+    margin: 0; /* Elimina márgenes por defecto */
+}
