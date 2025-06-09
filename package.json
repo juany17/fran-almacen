@@ -5,7 +5,7 @@
   "main": "gulpfile.js",
   "scripts": {
     "dev": "gulp",
-    "build": "gulp css javascript imagenes"
+    "build": "gulp build"
   },
   "author": "Juan",
   "license": "ISC",
