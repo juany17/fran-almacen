@@ -1,28 +1,26 @@
-# Usa una imagen oficial de PHP con Apache
+# Usa PHP + Apache como base
 FROM php:8.1-apache
 
-# Instala dependencias para Node y para PHP mysqli
-RUN apt-get update && apt-get install -y \
-    curl \
-    unzip \
-    git \
-    npm \
-    && docker-php-ext-install mysqli
+# Instala Node.js y npm
+RUN apt-get update && apt-get install -y curl gnupg \
+    && curl -fsSL https://deb.nodesource.com/setup_18.x | bash - \
+    && apt-get install -y nodejs
 
-# Copia los archivos del proyecto al directorio raíz de Apache
-COPY . /var/www/html/
+# Instala extensiones necesarias de PHP
+RUN docker-php-ext-install mysqli pdo pdo_mysql && a2enmod rewrite
 
-# Establece el directorio de trabajo
-WORKDIR /var/www/html/
-
-# Instala Node.js y dependencias npm
+# Copia los archivos de npm y corre npm install
+COPY package*.json ./
 RUN npm install
 
-# Ejecuta gulp para compilar assets
-RUN npx gulp build
+# Copia el resto del proyecto
+COPY . /var/www/html/
 
-# Da permisos a los archivos
+# Ejecuta tu build con gulp
+RUN npm run dev
+
+# Ajusta permisos
 RUN chown -R www-data:www-data /var/www/html
 
-# Expone el puerto 80
+# Expone el puerto
 EXPOSE 80
