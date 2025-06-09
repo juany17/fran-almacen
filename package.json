@@ -4,7 +4,8 @@
   "description": "Registro",
   "main": "gulpfile.js",
   "scripts": {
-    "dev": "gulp"
+    "dev": "gulp",
+    "build": "gulp css javascript imagenes"
   },
   "author": "Juan",
   "license": "ISC",
