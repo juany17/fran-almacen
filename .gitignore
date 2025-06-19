@@ -2,3 +2,4 @@ node_modules
 .cache
 /vendor/
 .env
+includes/config/database.php
