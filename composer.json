@@ -1,0 +1,14 @@
+{
+    "name": "juany/registro-almacen",
+    "description": "almacen",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Juan Jose Gomez",
+            "email": "gomezjuanjose871@gmail.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.6"
+    }
+}
