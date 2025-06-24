@@ -1,15 +1,18 @@
 <?php
-    require '../includes/funciones.php';
-    $auth = estaAutententicado();
-    
-    if(!$auth) {
-        header('Location: /');
-    }    
+ob_start(); // Inicia el buffer de salida
+require '../includes/funciones.php';
+$auth = estaAutenticado();
+
+if (!$auth) {
+    header('Location: /');
+    exit;
+}
+
 $resultado = $_GET['resultado'] ?? null;
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -43,22 +46,22 @@ $resultado = $_GET['resultado'] ?? null;
 </head>
 <body>
     <header class="header <?php echo isset($inicio) && $inicio ? 'inicio' : ''; ?>">
-    <div class="contenedor contenido-header">
-        <div class="barra">
+        <div class="contenedor contenido-header">
+            <div class="barra">
                 <a href="/">
-                    <H1 class="inicio">Despensa Francesca</H1>
+                    <h1 class="inicio">Despensa Francesca</h1>
                 </a>
                 <a href="/logout.php" class="login-link">Cerrar Sesión</a>
-                </a>
             </div>
-            </div>
-            <h1>Registro de productos administrador</h1>
+        </div>
+        <h2 style="text-align: center;">Panel de Administración</h2>
     </header>
 
     <main class="contenedor seccion">
-        <?php if(intval( $resultado ) === 1): ?>
-            <p class="alerta exito">creado correctamente</p>
-        <?php endif; ?>    
+        <?php if (intval($resultado) === 1): ?>
+            <p class="alerta exito">Creado correctamente</p>
+        <?php endif; ?>
+
         <h1 style="text-align: center;">🛒 Elige una opción</h1>
 
         <div class="enlaces-centrados">
@@ -67,29 +70,31 @@ $resultado = $_GET['resultado'] ?? null;
                 <p>Resumen de caja</p>
             </a>
             <a href="/admin/registro/contacto.php" class="enlace-img">
-                <img src="../src/img/contactos.jpg" alt="Almacén">
+                <img src="../src/img/contactos.jpg" alt="Contactos">
                 <p>Agregar contactos</p>
             </a>
             <a href="/admin/registro/crear.php" class="enlace-img">
-                <img src="../src/img/registrar caja.webp" alt="Resumen de Caja">
+                <img src="../src/img/registrar caja.webp" alt="Registrar Caja">
                 <p>Registrar caja</p>
             </a>
-            </a>
             <a href="/admin/registro/crear_almacen.php" class="enlace-img">
-                <img src="../src/img/gestion almacen.png" alt="Resumen de Caja">
-                <p>administrar almacen</p>
+                <img src="../src/img/gestion almacen.png" alt="Administrar Almacén">
+                <p>Administrar almacén</p>
             </a>
         </div>
     </main>
 
     <footer class="footer seccion">
         <div class="contenedor contenedor-footer">
-            <nav class="navegacion">
-            </nav>
+            <nav class="navegacion"></nav>
         </div>
-        <p class="copyright">Todos los derechos Reservados <?php echo date('d-m-Y'); ?> &copy;</p>
+        <p class="copyright">
+            Todos los derechos Reservados <?php echo date('d-m-Y'); ?> &copy;
+        </p>
     </footer>
 
     <script src="/build/js/bundle.min.js"></script>
 </body>
 </html>
+
+<?php ob_end_flush(); // Finaliza el buffer de salida ?>

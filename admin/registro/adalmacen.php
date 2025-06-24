@@ -62,7 +62,6 @@ $resultado = $stmt->get_result();
                     <H1 class="inicio">Despensa Francesca</H1>
                 </a>
                 <a href="/logout.php" class="login-link">Cerrar Sesión</a>
-                </a>
             </div>
             </div>
     </header>

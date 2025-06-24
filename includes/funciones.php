@@ -6,13 +6,11 @@ function incluirTemplates($nombre, $inicio = false) {
     include TEMPLATES_URL . "/${nombre}.php";
 }
 
-function estaAutententicado() : bool {
-    session_start();
-
-    $auth = $_SESSION['login'];
-    if($auth) {
-        return true;
+function estaAutenticado(): bool {
+    // Solo inicia la sesión si no está ya iniciada
+    if (session_status() === PHP_SESSION_NONE) {
+        session_start();
     }
 
-    return false;
+    return $_SESSION['login'] ?? false;
 }

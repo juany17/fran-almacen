@@ -1,4 +1,6 @@
 <?php
+ob_start(); // Previene errores por salida antes de session_start
+
 require 'includes/config/database.php';
 $db = conectarDB();
 
@@ -27,10 +29,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             // Verificar la contraseña
             $auth = password_verify($password, $usuario['password']);
-
-            var_dump($password); // Lo que escribió el usuario
-            var_dump($usuario['password']); // El hash guardado en la base
-
 
             if ($auth) {
                 session_start();
@@ -105,3 +103,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <script src="build/js/bundle.min.js"></script>
 </body>
 </html>
+
+<?php ob_end_flush(); ?>
