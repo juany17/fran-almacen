@@ -1,4 +1,3 @@
 <?php
 
-define('TEMPLATES_URL', __DIR__ . '/templates');
-define('TEMPLATES_URL', __DIR__ . 'funciones.php');
+defined('TEMPLATES_URL') || define('TEMPLATES_URL', __DIR__ . '/templates');

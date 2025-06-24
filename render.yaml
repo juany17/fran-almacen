@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: fran-almacen
+    runtime: php
+    buildCommand: composer install
+    startCommand: php -S 0.0.0.0:10000
+    envVars:
+      - key: DB_HOST
+        fromEnvVar: DB_HOST
+      - key: DB_USER
+        fromEnvVar: DB_USER
+      - key: DB_PASS
+        fromEnvVar: DB_PASS
+      - key: DB_NAME
+        fromEnvVar: DB_NAME
+      - key: DB_PORT
+        fromEnvVar: DB_PORT
