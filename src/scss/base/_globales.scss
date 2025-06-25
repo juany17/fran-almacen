@@ -67,27 +67,15 @@ main {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.campo input[type="text"] {
+    .campo input[type="text"],
+    .campo input[type="tel"],
+    .campo input[type="number"] {
     width: 300px;
     height: 40px;
     font-size: 16px;
     padding: 8px;
     flex: 1;
-    padding: 8px;
-    font-size: 14px;
-     }
-
- .campo {
-        display: flex;
-        align-items: center;
-        margin-bottom: 15px;
     }
-    
- .campo label {
-        width: 100px;
-        font-weight: bold;
-    }
-        
 
     table {
         width: 100%;
