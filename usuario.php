@@ -4,8 +4,8 @@ require 'includes/config/database.php';
 $db = conectarDB();
 
 //crear un email y un password
-$email = "correo@correo.com";
-$password = "123456";
+$email = "admin@fran";
+$password = "2016";
 
 $passwordHash = password_hash($password, PASSWORD_BCRYPT);
 
